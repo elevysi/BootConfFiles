@@ -23,6 +23,9 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
+      
+signing:
+    key: 1234Elevysi
 
 --- 
       
@@ -51,3 +54,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: ${EUREKASERVER_URI}
+      
+signing:
+    key: 1234Elevysi
