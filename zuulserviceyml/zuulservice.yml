@@ -1,18 +1,11 @@
-server:
-  port: 5555
-  
-  #Setting logging levels
-logging:
-    level:
-      com.netflix: WARN
-      org.springframework.web: WARN
-      com.thoughtmechanix: DEBUG
-
 eureka:
   instance:
-    preferIpAddress: true
+    prefer-ip-address: true
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-        defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  security:
+    enabled: false
