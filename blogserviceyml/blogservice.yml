@@ -30,7 +30,7 @@ authService:
 socialService:
   url: http://localhost:8200
 upload:
-  path: ${UPLOAD_PATH}
+  path: /media/elvis/DataHDD1/JAVAPro/Uploads/images/
 separator:
   ds: /
   oppositeDS: \\
