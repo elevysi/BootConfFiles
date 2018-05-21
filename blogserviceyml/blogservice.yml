@@ -9,8 +9,8 @@ spring:
   jpa:
     database: MYSQL
     show-sql: true
-    hibernate:
-      ddl-auto: none
+#    hibernate:
+#      ddl-auto: validate
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
@@ -23,7 +23,18 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
+blogService:
+  url: http://localhost:8400
+authService:
+  url: http://localhost:8100
+socialService:
+  url: http://localhost:8200
+upload:
+  path: ${UPLOAD_PATH}
+separator:
+  ds: /
+  oppositeDS: \\
+fileUploadValidatorMsg: Please select a file!
 --- 
       
 spring:
@@ -51,3 +62,16 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: ${EUREKASERVER_URI}
+blogService:
+  url: ${BLOGSERVER_URI}
+authService:
+  url: ${AUTHSERVER_URI}
+socialService:
+  url: ${SOCIALSERVER_URI}
+  
+upload:
+  path: ${UPLOAD_PATH}
+separator:
+  ds: /
+  oppositeDS: \\
+fileUploadValidatorMsg: Please select a file!
