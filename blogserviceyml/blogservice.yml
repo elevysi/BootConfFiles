@@ -31,6 +31,8 @@ socialService:
   url: http://localhost:8200
 upload:
   path: /media/elvis/DataHDD1/JAVAPro/Uploads/images/
+  mean: /media/elvis/DataHDD1/Projects/NodeJSProjectsGit/NodeJSProjects/laLifeApp/client/
+  meanFormatted: file:///media/elvis/DataHDD1/Projects/NodeJSProjectsGit/NodeJSProjects/laLifeApp/client/upload
 separator:
   ds: /
   oppositeDS: \\
