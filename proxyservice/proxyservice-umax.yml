@@ -1,0 +1,13 @@
+spring:
+  profiles: umax
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://23.95.0.172:8761/eureka/
+management:
+  security:
+    enabled: false

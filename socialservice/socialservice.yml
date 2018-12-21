@@ -1,0 +1,53 @@
+spring:
+  profiles: default
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/elevysic_socialdb
+    username: elevysi
+    password: root
+    
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+blogService:
+  url: http://localhost:8400
+authService:
+  url: http://localhost:8100
+socialService:
+  url: http://localhost:8200
+  
+upload:
+  path: /Users/elvis.hatungimana/Documents/Projects/JAVAPro/Uploads/images/
+  mean: /media/elvis/DataHDD1/Projects/NodeJSProjectsGit/NodeJSProjects/laLifeApp/client/
+  meanFormatted: file:///media/elvis/DataHDD1/Projects/NodeJSProjectsGit/NodeJSProjects/laLifeApp/client/upload
+separator:
+  ds: /
+  oppositeDS: \\
+fileUploadValidatorMsg: Please select a file!
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: SocialApp
+      clientSecret: Fields2018
+      scope:
+        read
+      accessTokenUri: http://localhost:8100/oauth/token
+      userAuthorizationUri: http://localhost:8100/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8100/api/user

@@ -1,0 +1,54 @@
+spring:
+  profiles: umax
+  session:
+    cookie:
+      name: ELAUTHSESSION
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/elevysic_auth
+    username: admin
+    password: fShZLLvaSPRr955u
+    
+  jpa:
+    database: MYSQL
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://23.95.0.172:8761/eureka/
+      
+signing:
+    key: 1234Elevysi
+
+blogService:
+  url: http://23.95.0.172:8400
+authService:
+  url: http://23.95.0.172:8100
+socialService:
+  url: http://23.95.0.172:8200
+upload:
+  path: ${UPLOAD_PATH}
+separator:
+  ds: /
+  oppositeDS: \\
+fileUploadValidatorMsg: Please select a file!
+security:
+  oauth2:
+    client:
+      clientId: AuthApp
+      clientSecret: Fields2019
+      scope: read
+      accessTokenUri: http://23.95.0.172:8100/oauth/token
+      userAuthorizationUri: http://23.95.0.172:8100/oauth/authorize
+    resource:
+      userInfoUri: http://23.95.0.172:8100/api/user
