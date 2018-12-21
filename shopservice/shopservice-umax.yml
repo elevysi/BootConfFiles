@@ -22,8 +22,26 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
+<<<<<<< HEAD:shopservice/shopservice-umax.yml
       defaultZone: http://23.95.0.172:8761/eureka/
 
+=======
+      defaultZone: http://localhost:8761/eureka/
+blogService:
+  url: http://localhost:8400
+authService:
+  url: http://localhost:8100
+socialService:
+  url: http://localhost:8200
+upload:
+  path: /media/elvis/DataHDD1/JAVAPro/Uploads/images/
+  mean: /media/elvis/DataHDD1/Projects/NodeJSProjectsGit/NodeJSProjects/laLifeApp/client/
+  meanFormatted: file:///media/elvis/DataHDD1/Projects/NodeJSProjectsGit/NodeJSProjects/laLifeApp/client/upload
+separator:
+  ds: /
+  oppositeDS: \\
+fileUploadValidatorMsg: Please select a file!
+>>>>>>> 543f39fad7b58f3b61dd1e32b7b03fba01648a84:blogserviceyml/blogservice.yml
 --- 
       
 spring:
