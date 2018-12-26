@@ -1,0 +1,14 @@
+spring:
+  profiles: umax
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://23.95.0.172:8761/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 5
+    peer-node-read-timeout-ms: 10000
+    
