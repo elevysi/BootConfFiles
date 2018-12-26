@@ -1,0 +1,71 @@
+spring:
+  profiles: default
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/elevysic_shopdb
+    username: admin
+    password: fShZLLvaSPRr955u
+    
+  jpa:
+    database: MYSQL
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+<<<<<<< HEAD:shopservice/shopservice-umax.yml
+      defaultZone: http://23.95.0.172:8761/eureka/
+
+=======
+      defaultZone: http://localhost:8761/eureka/
+blogService:
+  url: http://localhost:8400
+authService:
+  url: http://localhost:8100
+socialService:
+  url: http://localhost:8200
+upload:
+  path: /media/elvis/DataHDD1/JAVAPro/Uploads/images/
+  mean: /media/elvis/DataHDD1/Projects/NodeJSProjectsGit/NodeJSProjects/laLifeApp/client/
+  meanFormatted: file:///media/elvis/DataHDD1/Projects/NodeJSProjectsGit/NodeJSProjects/laLifeApp/client/upload
+separator:
+  ds: /
+  oppositeDS: \\
+fileUploadValidatorMsg: Please select a file!
+>>>>>>> 543f39fad7b58f3b61dd1e32b7b03fba01648a84:blogserviceyml/blogservice.yml
+--- 
+      
+spring:
+  profiles: container
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${DATABASE_HOST}:${DATABASESERVER_PORT}/${DATABASE_NAME}
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
+    initialize: true
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKASERVER_URI}
