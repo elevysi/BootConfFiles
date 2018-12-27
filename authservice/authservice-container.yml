@@ -42,3 +42,17 @@ separator:
   ds: /
   oppositeDS: \\
 fileUploadValidatorMsg: Please select a file!
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: ${OAUTH2CLIENTID}
+      clientSecret: ${OAUTH2CLIENTSECRET}
+      scope:
+        ${OAUTH2CLIENTSCOPE}
+      accessTokenUri: ${AUTHSERVER_URI}/oauth/token
+      userAuthorizationUri: ${AUTHSERVER_URI}/oauth/authorize
+    resource:
+      userInfoUri: ${AUTHSERVER_URI}/api/user
