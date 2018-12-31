@@ -46,7 +46,7 @@ security:
       clientSecret: ${OAUTH2CLIENTSECRET}
       scope:
         ${OAUTH2CLIENTSCOPE}
-      accessTokenUri: ${AUTHSERVER_URI}/oauth/token
-      userAuthorizationUri: ${AUTHDOMAINNAME}:${AUTHSERVER_PORT}/oauth/authorize
+      accessTokenUri: ${DOMAINNAME}:${AUTHSERVER_PORT}/oauth/token
+      userAuthorizationUri: ${DOMAINNAME}:${AUTHSERVER_PORT}/oauth/authorize
     resource:
-      userInfoUri: ${AUTHSERVER_URI}/api/user
+      userInfoUri: ${DOMAINNAME}:${AUTHSERVER_PORT}/api/user
