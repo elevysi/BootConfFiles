@@ -46,7 +46,7 @@ security:
       clientSecret: ${OAUTH2CLIENTSECRET}
       scope:
         ${OAUTH2CLIENTSCOPE}
-      accessTokenUri: ${DOMAINNAME}:${AUTHSERVER_PORT}/oauth/token
-      userAuthorizationUri: ${DOMAINNAME}:${AUTHSERVER_PORT}/oauth/authorize
+      accessTokenUri: http://localhost:8100/oauth/token
+      userAuthorizationUri: http://localhost:8100/oauth/authorize
     resource:
-      userInfoUri: ${DOMAINNAME}:${AUTHSERVER_PORT}/api/user
+      userInfoUri: http://localhost:8100/api/user
