@@ -32,7 +32,7 @@ signing:
 blogService:
   url: ${BLOGSERVER_URI}
 authService:
-  url: ${AUTHSERVER_URI}
+  url: ${AUTH_URI}
 socialService:
   url: ${SOCIALSERVER_URI}
   
