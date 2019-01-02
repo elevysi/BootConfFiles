@@ -2,7 +2,7 @@ spring:
   profiles: container
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://${DATABASE_HOST}:${DATABASESERVER_PORT}/${DATABASE_NAME}
+    url: jdbc:mysql://${DATABASE_HOST}:${DATABASESERVER_PORT}/${DATABASE_NAME}?autoReconnect=true&useSSL=false
     username: ${DATABASE_USER}
     password: ${DATABASE_PASSWORD}
     initialize: true
