@@ -6,8 +6,8 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    service-url:
-      defaultZone: ${EUREKASERVER_URI}
+#    service-url:
+#      defaultZone: ${EUREKASERVER_URI}
   server:
     waitTimeInMsWhenSyncEmpty: 5
     peer-node-read-timeout-ms: 10000
